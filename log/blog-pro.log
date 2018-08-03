@@ -1,0 +1,5 @@
+2018-08-03 01:45:50.176  INFO 1306 --- [restartedMain] c.p.techblog.TechblogApplication         : Starting TechblogApplication on Pings-MBP with PID 1306 (/Users/pingsunyi/IdeaProjects/techblog/target/classes started by pingsunyi in /Users/pingsunyi/IdeaProjects/techblog)
+2018-08-03 01:45:50.177  INFO 1306 --- [restartedMain] c.p.techblog.TechblogApplication         : The following profiles are active: pro
+2018-08-03 01:45:52.341  WARN 1306 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-08-03 01:45:52.422  WARN 1306 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2018-08-03 01:45:52.715  INFO 1306 --- [restartedMain] c.p.techblog.TechblogApplication         : Started TechblogApplication in 2.867 seconds (JVM running for 3.349)

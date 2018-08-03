@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--fit for mobile end-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css">
+    <link rel="stylesheet" href="../../static/css/mystyle.css">
+</head>
+<body>
+
+    <!--导航-->
+    <!--navigator-->
+    <nav class="ui inverted vertical segment m-padding-tb-tiny m-shadow-small">
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <h1 class="ui pink header item">Admin</h1>
+                <!--导航菜单-->
+                <!--navigation menu-->
+                <a href="#" class="active m-item item m-mobile-hide"><i class="tiny home icon"></i>Blogs</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="tiny idea icon"></i>Types</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="tiny tags icon"></i>Tags</a>
+                <div class="right m-item m-mobile-hide menu">
+                    <div class="ui dropdown item">
+                        <div class="text">
+                            <img src="../../static/images/avatar.png" alt="" class="ui avatar image">Sunny Ping
+                        </div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a href="#" class="item">Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--移动端菜单-->
+        <!--sidebar of mobile end-->
+        <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+
+    <!--二级导航-->
+    <!--secondary navigation bar-->
+    <div class="ui attached pointing menu">
+        <div class="ui container">
+            <div class="right menu">
+                <a href="#" class="active pink item">Post</a>
+                <a href="#" class="item">List</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--中间部分内容-->
+    <!--main content-->
+    <div class="m-container-small m-padding-tb-big">
+        <div class="ui container">
+            <form action="#" method="post" class="ui form">
+                
+                <!--标题-->
+                <!--title-->
+                <div class="required field">
+                    <div class="ui left labeled input">
+                        <div class="ui selection compact dropdown label">
+                            <input type="hidden" value="Original">
+                            <i class="dropdown icon"></i>
+                            <div class="text">Original</div>
+                            <div class="menu">
+                                <div class="item" data-value="Original">Original</div>
+                                <div class="item" data-value="Reproduced">Reproduced</div>
+                                <div class="item" data-value="Translated">Translated</div>
+                            </div>
+                        </div>
+                        <input type="text" name="title" placeholder="Title">
+                    </div>
+                </div>
+                <!--博客正文-->
+                <!--blog content-->
+                <div class="required field">
+                    <div id="md-content" style="z-index: 1 !important;">
+                        <textarea name="content" placeholder="Content..." style="display: none;">
+                            [TOC]
+
+#### Disabled options
+
+- TeX (Based on KaTeX);
+- Emoji;
+- Task lists;
+- HTML tags decode;
+- Flowchart and Sequence Diagram;
+                        </textarea>
+                    </div>
+                </div>
+
+                <!--分类、标签选项-->
+                <!--options for types and tags-->
+                <div class="two fields">
+                    <!--分类-->
+                    <!--type-->
+                    <div class="field">
+                        <div class="ui left labeled action input">
+                            <label class="ui compact basic label">Type</label>
+                            <div class="ui fluid selection dropdown">
+                                <input type="hidden" name="type">
+                                <i class="dropdown icon"></i>
+                                <div class="default text">Type</div>
+                                <div class="menu">
+                                    <div class="item" data-value="1">Blog</div>
+                                    <div class="item" data-value="2">Note</div>
+                                    <div class="item" data-value="3">Diary</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--标签-->
+                    <!--tag-->
+                    <div class="field">
+                        <div class="ui left labeled input">
+                            <label class="ui compact basic label">Tag</label>
+                            <div class="ui fluid multiple search selection dropdown">
+                                <input type="hidden" name="tag">
+                                <i class="dropdown icon"></i>
+                                <div class="default text">Tag</div>
+                                <div class="menu">
+                                    <div class="item" data-value="1">C++</div>
+                                    <div class="item" data-value="2">MySQL</div>
+                                    <div class="item" data-value="3">Java</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--首图地址-->
+                <!--url of first picture-->
+                <div class="field">
+                    <div class="ui left labeled input">
+                        <label class="ui basic label">Picture</label>
+                        <input type="text" name="indexPicture" placeholder="Url of picture">
+                    </div>
+                </div>
+
+                <!--四个选项-->
+                <!--four options-->
+                <div class="inline fields">
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="recommend" name="recommend" checked class="hidden">
+                            <label for="recommend">Recommend</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="shareInfo" name="shareInfo" class="hidden">
+                            <label for="shareInfo">Reproduce</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="support" name="support" class="hidden">
+                            <label for="support">Support</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="comment" name="comment" class="hidden">
+                            <label for="comment">Comment</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!--错误提示-->
+                <!--error message-->
+                <div class="ui error message"></div>
+
+                <!--按钮-->
+                <!--button-->
+                <div class="ui right aligned container">
+                    <button type="button" class="ui button" onclick="window.history.go(-1)">Back</button>
+                    <button class="ui secondary button">Save</button>
+                    <button class="ui pink button">Post</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br>
+    <br>
+
+
+    <!--底部-->
+    <!--footer-->
+    <footer class="ui inverted vertical segment m-padding-tb-massive">
+        <div class="ui center aligned container">
+
+            <!--底部导航栏-->
+            <!--three grid content-->
+            <div class="ui divided stackable grid">
+                <!--社群-->
+                <!--community-->
+                <div class="four wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced m-opacity-small">Community</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">CSDN</a>
+                        <a href="#" class="item">github</a>
+                        <a href="#" class="item">RPI</a>
+                    </div>
+                </div>
+                <!--联系方式-->
+                <!--contact-->
+                <div class="four wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced m-opacity-small">Contact</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Facebook</a>
+                        <a href="#" class="item">LinkedIn</a>
+                    </div>
+                </div>
+                <!--自我介绍-->
+                <!--introduction-->
+                <div class="eight wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced m-opacity-small">Sunny Ping</h4>
+                    <p class="m-text-thin m-text-spaced m-opacity-medium">This is my personal blog, where any ideas about coding and writing will be shared here!</p>
+                </div>
+            </div>
+
+            <!--版权声明-->
+            <!--copyright-->
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaced m-opacity-small">Designed and developed by Sunny Ping.</p>
+            <p class="m-text-thin m-text-spaced m-opacity-small">Copyright©2017-2018 All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js"></script>
+    <script src="../../static/lib/editormd/editormd.min.js"></script>
+
+    <script>
+
+        // 初始化markdown编辑器
+        // initialize markdown editor
+        var contentEditor;
+        $(function() {
+            contentEditor = editormd("md-content", {
+                width   : "100%",
+                height  : 640,
+                syncScrolling : "single",
+                path    : "../static/lib/editormd/lib/"
+            });
+        });
+
+        // 移动端菜单
+        // navigation bar for mobile end
+        $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-mobile-hide');
+        });
+
+        $('.ui.dropdown').dropdown({
+            on : 'hover'
+        });
+
+        // 表单验证
+        // form validation
+        $('.ui.form').form({
+            fields : {
+                title : {
+                    identifier : 'title',
+                    rules : [{
+                        type : 'empty',
+                        prompt : 'Please input the title'
+                    }]
+                }
+            }
+        });
+
+
+    </script>
+
+</body>
+</html>
