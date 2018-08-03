@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="_fragments :: head(~{::title})">
     <meta charset="UTF-8">
     <!--fit for mobile end-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
 
     <!--导航-->
     <!--navigator-->
-    <nav class="ui inverted vertical segment m-padding-tb-tiny m-shadow-small">
+    <nav th:replace="_fragments :: menu(1)" class="ui inverted vertical segment m-padding-tb-tiny m-shadow-small">
         <div class="ui container">
             <div class="ui inverted secondary stackable menu">
                 <h1 class="ui pink header item">Sunny</h1>
@@ -41,7 +41,6 @@
         <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
             <i class="sidebar icon"></i>
         </a>
-
     </nav>
 
 
@@ -314,7 +313,7 @@
 
     <!--底部-->
     <!--footer-->
-    <footer class="ui inverted vertical segment m-padding-tb-massive">
+    <footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padding-tb-massive">
         <div class="ui center aligned container">
 
             <!--底部导航栏-->
@@ -356,9 +355,11 @@
     </footer>
 
 
-
+    <!--/*/<th:block th:replace="_fragments :: script">/*/-->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js"></script>
+    <!--/*/</th:block>/*/-->
+
 
 
     <script>

@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head th:replace="_fragments :: head(~{::title})">
+<head th:fragment="head(title)">
     <meta charset="UTF-8">
     <!--fit for mobile end-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title th:replace="${title}">Blog</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css">
-    <link rel="stylesheet" href="../../static/css/mystyle.css">
+    <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
+    <link rel="stylesheet" href="../static/css/animate.css" th:href="@{/css/animate.css}">
+    <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
+    <link rel="stylesheet" href="../static/css/mystyle.css" th:href="@{/css/mystyle.css}">
 </head>
 <body>
-
-
     <!--导航-->
     <!--navigator-->
-    <nav th:replace="_fragments :: menu(0)" class="ui inverted vertical segment m-padding-tb-tiny m-shadow-small">
+    <nav th:fragment="menu(n)" class="ui inverted vertical segment m-padding-tb-tiny m-shadow-small">
         <div class="ui container">
             <div class="ui inverted secondary stackable menu">
                 <h1 class="ui pink header item">Sunny</h1>
                 <!--导航菜单-->
                 <!--navigation menu-->
-                <a href="#" class="active m-item item m-mobile-hide"><i class="tiny home icon"></i>Home</a>
-                <a href="#" class="m-item item m-mobile-hide"><i class="tiny idea icon"></i>Types</a>
-                <a href="#" class="m-item item m-mobile-hide"><i class="tiny tags icon"></i>Tags</a>
-                <a href="#" class="m-item item m-mobile-hide"><i class="tiny clone icon"></i>Archive</a>
-                <a href="#" class="m-item item m-mobile-hide"><i class="tiny info icon"></i>About Me</a>
+                <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class="tiny home icon"></i>Home</a>
+                <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class="tiny idea icon"></i>Types</a>
+                <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class="tiny tags icon"></i>Tags</a>
+                <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class="tiny clone icon"></i>Archive</a>
+                <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class="tiny info icon"></i>About Me</a>
 
                 <!--搜索框-->
                 <!--search bar-->
@@ -42,30 +43,6 @@
             <i class="sidebar icon"></i>
         </a>
     </nav>
-
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-
-    <!--错误信息-->
-    <!--error message-->
-    <div class="m-container-small m-padding-tb-massive">
-        <div class="ui error message m-padding-tb-massive">
-            <div class="container">
-                <h1>404</h1>
-                <h3>Ooops, the page does not exist.</h3>
-            </div>
-        </div>
-    </div>
-
-
-    <br>
-    <br>
-    <br>
-    <br>
 
 
     <!--底部-->
@@ -110,6 +87,18 @@
             <p class="m-text-thin m-text-spaced m-opacity-small">Copyright©2017-2018 All Rights Reserved.</p>
         </div>
     </footer>
+
+
+    <!--JavaScript资源-->
+    <!--JavaScript source-->
+    <th:block th:fragment="script">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+        <script src="../static/lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script>
+        <script src="../static/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
+    </th:block>
+
 
 </body>
 </html>
