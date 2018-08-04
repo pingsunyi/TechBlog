@@ -62,3 +62,277 @@
 2018-08-04 10:48:10.997  WARN 13650 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=31m6s607ms).
 2018-08-04 11:20:02.612  WARN 13650 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=31m21s613ms).
 2018-08-04 11:39:17.889  WARN 13650 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=19m15s277ms).
+2018-08-04 12:52:18.471  INFO 13650 --- [Thread-39] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@388a62eb: startup date [Sat Aug 04 01:25:59 EDT 2018]; root of context hierarchy
+2018-08-04 12:52:18.472  INFO 13650 --- [Thread-39] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-08-04 12:52:18.472  INFO 13650 --- [Thread-39] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-08-04 12:52:18.472  INFO 13650 --- [Thread-39] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-08-04 12:52:18.472  INFO 13650 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2018-08-04 12:52:18.475  INFO 13650 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2018-08-04 12:52:18.779  INFO 13650 --- [restartedMain] c.p.techblog.TechblogApplication         : Starting TechblogApplication on Pings-MBP with PID 13650 (started by pingsunyi in /Users/pingsunyi/Desktop/My Project/techblog)
+2018-08-04 12:52:18.779 DEBUG 13650 --- [restartedMain] c.p.techblog.TechblogApplication         : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2018-08-04 12:52:18.779  INFO 13650 --- [restartedMain] c.p.techblog.TechblogApplication         : The following profiles are active: dev
+2018-08-04 12:52:18.781  INFO 13650 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3f4e932c: startup date [Sat Aug 04 12:52:18 EDT 2018]; root of context hierarchy
+2018-08-04 12:52:18.994  INFO 13650 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$856378a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-04 12:52:19.094  INFO 13650 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-08-04 12:52:19.095  INFO 13650 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-04 12:52:19.095  INFO 13650 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-08-04 12:52:19.100  INFO 13650 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-04 12:52:19.101  INFO 13650 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 320 ms
+2018-08-04 12:52:19.117  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-04 12:52:19.117  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-04 12:52:19.117  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-04 12:52:19.117  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-04 12:52:19.117  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-04 12:52:19.160  INFO 13650 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2018-08-04 12:52:19.163  INFO 13650 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2018-08-04 12:52:19.170  INFO 13650 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-08-04 12:52:19.170  INFO 13650 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-08-04 12:52:19.191  INFO 13650 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-08-04 12:52:19.335  INFO 13650 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-08-04 12:52:19.599  INFO 13650 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-04 12:52:19.719  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3f4e932c: startup date [Sat Aug 04 12:52:18 EDT 2018]; root of context hierarchy
+2018-08-04 12:52:19.728  WARN 13650 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-08-04 12:52:19.735  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.pingsunyi.techblog.web.IndexController.index()
+2018-08-04 12:52:19.735  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog],methods=[GET]}" onto public java.lang.String com.pingsunyi.techblog.web.IndexController.blog()
+2018-08-04 12:52:19.737  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.pingsunyi.techblog.web.admin.LoginController.loginPage()
+2018-08-04 12:52:19.737  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.pingsunyi.techblog.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-08-04 12:52:19.737  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.pingsunyi.techblog.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
+2018-08-04 12:52:19.739  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-04 12:52:19.739  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-04 12:52:19.759  INFO 13650 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-04 12:52:19.759  INFO 13650 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-04 12:52:19.766  INFO 13650 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2018-08-04 12:52:19.799  INFO 13650 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2018-08-04 12:52:19.918  INFO 13650 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-08-04 12:52:19.935  INFO 13650 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-04 12:52:19.935  INFO 13650 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-04 12:52:19.937  INFO 13650 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-08-04 12:52:19.943  INFO 13650 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-04 12:52:19.944  INFO 13650 --- [restartedMain] c.p.techblog.TechblogApplication         : Started TechblogApplication in 1.205 seconds (JVM running for 18893.115)
+2018-08-04 12:52:19.945  INFO 13650 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2018-08-04 12:52:34.235  INFO 13650 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-04 12:52:34.235  INFO 13650 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-04 12:52:34.242  INFO 13650 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 7 ms
+2018-08-04 12:52:34.244  INFO 13650 --- [http-nio-8080-exec-1] com.pingsunyi.techblog.aspect.LogAspect  : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.pingsunyi.techblog.web.IndexController.index', args=[]}
+2018-08-04 12:52:34.247  INFO 13650 --- [http-nio-8080-exec-1] com.pingsunyi.techblog.aspect.LogAspect  : Result : index
+2018-08-04 12:52:40.564  INFO 13650 --- [http-nio-8080-exec-7] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-08-04 13:48:42.882  WARN 13650 --- [HikariPool-6 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=25m23s346ms).
+2018-08-04 14:21:38.875  INFO 13650 --- [Thread-45] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3f4e932c: startup date [Sat Aug 04 12:52:18 EDT 2018]; root of context hierarchy
+2018-08-04 14:21:38.876  INFO 13650 --- [Thread-45] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-08-04 14:21:38.876  INFO 13650 --- [Thread-45] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-08-04 14:21:38.876  INFO 13650 --- [Thread-45] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-08-04 14:21:38.877  INFO 13650 --- [Thread-45] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2018-08-04 14:21:38.879  INFO 13650 --- [Thread-45] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2018-08-04 14:21:39.174  INFO 13650 --- [restartedMain] c.p.techblog.TechblogApplication         : Starting TechblogApplication on Pings-MBP with PID 13650 (started by pingsunyi in /Users/pingsunyi/Desktop/My Project/techblog)
+2018-08-04 14:21:39.174 DEBUG 13650 --- [restartedMain] c.p.techblog.TechblogApplication         : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2018-08-04 14:21:39.174  INFO 13650 --- [restartedMain] c.p.techblog.TechblogApplication         : The following profiles are active: dev
+2018-08-04 14:21:39.175  INFO 13650 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2ec3b8a2: startup date [Sat Aug 04 14:21:39 EDT 2018]; root of context hierarchy
+2018-08-04 14:21:39.435  INFO 13650 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$856378a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-04 14:21:39.551  INFO 13650 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-08-04 14:21:39.552  INFO 13650 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-04 14:21:39.552  INFO 13650 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-08-04 14:21:39.557  INFO 13650 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-04 14:21:39.558  INFO 13650 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 383 ms
+2018-08-04 14:21:39.578  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-04 14:21:39.578  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-04 14:21:39.578  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-04 14:21:39.578  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-04 14:21:39.578  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-04 14:21:39.627  INFO 13650 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2018-08-04 14:21:39.630  INFO 13650 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2018-08-04 14:21:39.637  INFO 13650 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-08-04 14:21:39.637  INFO 13650 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-08-04 14:21:39.655  INFO 13650 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-08-04 14:21:39.806  INFO 13650 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-08-04 14:21:39.972  INFO 13650 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-04 14:21:40.090  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2ec3b8a2: startup date [Sat Aug 04 14:21:39 EDT 2018]; root of context hierarchy
+2018-08-04 14:21:40.103  WARN 13650 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-08-04 14:21:40.108  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.pingsunyi.techblog.web.IndexController.index()
+2018-08-04 14:21:40.108  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog],methods=[GET]}" onto public java.lang.String com.pingsunyi.techblog.web.IndexController.blog()
+2018-08-04 14:21:40.109  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.pingsunyi.techblog.web.admin.LoginController.loginPage()
+2018-08-04 14:21:40.109  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.pingsunyi.techblog.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-08-04 14:21:40.109  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.pingsunyi.techblog.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
+2018-08-04 14:21:40.110  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-04 14:21:40.110  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-04 14:21:40.132  INFO 13650 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-04 14:21:40.132  INFO 13650 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-04 14:21:40.139  INFO 13650 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2018-08-04 14:21:40.168  INFO 13650 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2018-08-04 14:21:40.279  INFO 13650 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-08-04 14:21:40.294  INFO 13650 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-04 14:21:40.295  INFO 13650 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-04 14:21:40.297  INFO 13650 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-08-04 14:21:40.301  INFO 13650 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-04 14:21:40.302  INFO 13650 --- [restartedMain] c.p.techblog.TechblogApplication         : Started TechblogApplication in 1.156 seconds (JVM running for 22760.105)
+2018-08-04 14:21:40.303  INFO 13650 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2018-08-04 14:21:40.980  INFO 13650 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-04 14:21:40.980  INFO 13650 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-04 14:21:40.986  INFO 13650 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 6 ms
+2018-08-04 14:21:45.498  INFO 13650 --- [http-nio-8080-exec-3] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-08-04 14:22:25.722  INFO 13650 --- [Thread-51] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2ec3b8a2: startup date [Sat Aug 04 14:21:39 EDT 2018]; root of context hierarchy
+2018-08-04 14:22:25.723  INFO 13650 --- [Thread-51] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-08-04 14:22:25.723  INFO 13650 --- [Thread-51] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-08-04 14:22:25.723  INFO 13650 --- [Thread-51] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-08-04 14:22:25.724  INFO 13650 --- [Thread-51] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2018-08-04 14:22:25.726  INFO 13650 --- [Thread-51] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2018-08-04 14:22:25.973  INFO 13650 --- [restartedMain] c.p.techblog.TechblogApplication         : Starting TechblogApplication on Pings-MBP with PID 13650 (started by pingsunyi in /Users/pingsunyi/Desktop/My Project/techblog)
+2018-08-04 14:22:25.974 DEBUG 13650 --- [restartedMain] c.p.techblog.TechblogApplication         : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2018-08-04 14:22:25.974  INFO 13650 --- [restartedMain] c.p.techblog.TechblogApplication         : The following profiles are active: dev
+2018-08-04 14:22:25.976  INFO 13650 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1bba8a28: startup date [Sat Aug 04 14:22:25 EDT 2018]; root of context hierarchy
+2018-08-04 14:22:26.188  INFO 13650 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$856378a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-04 14:22:26.274  INFO 13650 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-08-04 14:22:26.275  INFO 13650 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-04 14:22:26.275  INFO 13650 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-08-04 14:22:26.280  INFO 13650 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-04 14:22:26.281  INFO 13650 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 305 ms
+2018-08-04 14:22:26.297  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-04 14:22:26.297  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-04 14:22:26.297  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-04 14:22:26.297  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-04 14:22:26.297  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-04 14:22:26.338  INFO 13650 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2018-08-04 14:22:26.341  INFO 13650 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2018-08-04 14:22:26.347  INFO 13650 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-08-04 14:22:26.347  INFO 13650 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-08-04 14:22:26.360  INFO 13650 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-08-04 14:22:26.490  INFO 13650 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-08-04 14:22:26.654  INFO 13650 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-04 14:22:26.780  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1bba8a28: startup date [Sat Aug 04 14:22:25 EDT 2018]; root of context hierarchy
+2018-08-04 14:22:26.790  WARN 13650 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-08-04 14:22:26.796  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.pingsunyi.techblog.web.IndexController.index()
+2018-08-04 14:22:26.796  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog],methods=[GET]}" onto public java.lang.String com.pingsunyi.techblog.web.IndexController.blog()
+2018-08-04 14:22:26.797  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.pingsunyi.techblog.web.admin.LoginController.loginPage()
+2018-08-04 14:22:26.797  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.pingsunyi.techblog.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-08-04 14:22:26.797  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.pingsunyi.techblog.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
+2018-08-04 14:22:26.799  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-04 14:22:26.799  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-04 14:22:26.819  INFO 13650 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-04 14:22:26.819  INFO 13650 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-04 14:22:26.826  INFO 13650 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2018-08-04 14:22:26.858  INFO 13650 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2018-08-04 14:22:26.971  INFO 13650 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-08-04 14:22:26.988  INFO 13650 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-04 14:22:26.988  INFO 13650 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-04 14:22:26.991  INFO 13650 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-08-04 14:22:26.995  INFO 13650 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-04 14:22:26.996  INFO 13650 --- [restartedMain] c.p.techblog.TechblogApplication         : Started TechblogApplication in 1.049 seconds (JVM running for 22806.799)
+2018-08-04 14:22:26.998  INFO 13650 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2018-08-04 14:22:28.954  INFO 13650 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-04 14:22:28.954  INFO 13650 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-04 14:22:28.960  INFO 13650 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 6 ms
+2018-08-04 14:22:28.964  INFO 13650 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-08-04 14:26:17.663  INFO 13650 --- [Thread-57] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1bba8a28: startup date [Sat Aug 04 14:22:25 EDT 2018]; root of context hierarchy
+2018-08-04 14:26:17.664  INFO 13650 --- [Thread-57] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-08-04 14:26:17.664  INFO 13650 --- [Thread-57] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-08-04 14:26:17.665  INFO 13650 --- [Thread-57] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-08-04 14:26:17.665  INFO 13650 --- [Thread-57] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2018-08-04 14:26:17.668  INFO 13650 --- [Thread-57] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2018-08-04 14:26:17.914  INFO 13650 --- [restartedMain] c.p.techblog.TechblogApplication         : Starting TechblogApplication on Pings-MBP with PID 13650 (started by pingsunyi in /Users/pingsunyi/Desktop/My Project/techblog)
+2018-08-04 14:26:17.914 DEBUG 13650 --- [restartedMain] c.p.techblog.TechblogApplication         : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2018-08-04 14:26:17.914  INFO 13650 --- [restartedMain] c.p.techblog.TechblogApplication         : The following profiles are active: dev
+2018-08-04 14:26:17.916  INFO 13650 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@49b6256c: startup date [Sat Aug 04 14:26:17 EDT 2018]; root of context hierarchy
+2018-08-04 14:26:18.103  INFO 13650 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$856378a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-04 14:26:18.185  INFO 13650 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-08-04 14:26:18.186  INFO 13650 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-04 14:26:18.186  INFO 13650 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-08-04 14:26:18.191  INFO 13650 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-04 14:26:18.192  INFO 13650 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 276 ms
+2018-08-04 14:26:18.206  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-04 14:26:18.207  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-04 14:26:18.207  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-04 14:26:18.207  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-04 14:26:18.207  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-04 14:26:18.252  INFO 13650 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2018-08-04 14:26:18.255  INFO 13650 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2018-08-04 14:26:18.261  INFO 13650 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-08-04 14:26:18.261  INFO 13650 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-08-04 14:26:18.274  INFO 13650 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-08-04 14:26:18.388  INFO 13650 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-08-04 14:26:18.540  INFO 13650 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-04 14:26:18.657  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@49b6256c: startup date [Sat Aug 04 14:26:17 EDT 2018]; root of context hierarchy
+2018-08-04 14:26:18.666  WARN 13650 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-08-04 14:26:18.671  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.pingsunyi.techblog.web.IndexController.index()
+2018-08-04 14:26:18.671  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog],methods=[GET]}" onto public java.lang.String com.pingsunyi.techblog.web.IndexController.blog()
+2018-08-04 14:26:18.671  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.pingsunyi.techblog.web.admin.BlogController.blogs()
+2018-08-04 14:26:18.673  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.pingsunyi.techblog.web.admin.LoginController.loginPage()
+2018-08-04 14:26:18.673  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.pingsunyi.techblog.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-08-04 14:26:18.673  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.pingsunyi.techblog.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
+2018-08-04 14:26:18.674  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-04 14:26:18.674  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-04 14:26:18.694  INFO 13650 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-04 14:26:18.694  INFO 13650 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-04 14:26:18.701  INFO 13650 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2018-08-04 14:26:18.730  INFO 13650 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2018-08-04 14:26:18.844  INFO 13650 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-08-04 14:26:18.859  INFO 13650 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-04 14:26:18.860  INFO 13650 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-04 14:26:18.862  INFO 13650 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-08-04 14:26:18.867  INFO 13650 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-04 14:26:18.868  INFO 13650 --- [restartedMain] c.p.techblog.TechblogApplication         : Started TechblogApplication in 0.979 seconds (JVM running for 23038.67)
+2018-08-04 14:26:18.869  INFO 13650 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2018-08-04 14:26:23.996  INFO 13650 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-04 14:26:23.996  INFO 13650 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-04 14:26:24.003  INFO 13650 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 6 ms
+2018-08-04 14:36:59.861  INFO 13650 --- [Thread-63] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@49b6256c: startup date [Sat Aug 04 14:26:17 EDT 2018]; root of context hierarchy
+2018-08-04 14:36:59.862  INFO 13650 --- [Thread-63] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-08-04 14:36:59.862  INFO 13650 --- [Thread-63] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-08-04 14:36:59.862  INFO 13650 --- [Thread-63] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-08-04 14:36:59.863  INFO 13650 --- [Thread-63] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2018-08-04 14:36:59.866  INFO 13650 --- [Thread-63] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2018-08-04 14:37:00.093  INFO 13650 --- [restartedMain] c.p.techblog.TechblogApplication         : Starting TechblogApplication on Pings-MBP with PID 13650 (started by pingsunyi in /Users/pingsunyi/Desktop/My Project/techblog)
+2018-08-04 14:37:00.093 DEBUG 13650 --- [restartedMain] c.p.techblog.TechblogApplication         : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2018-08-04 14:37:00.093  INFO 13650 --- [restartedMain] c.p.techblog.TechblogApplication         : The following profiles are active: dev
+2018-08-04 14:37:00.095  INFO 13650 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4c540c64: startup date [Sat Aug 04 14:37:00 EDT 2018]; root of context hierarchy
+2018-08-04 14:37:00.295  INFO 13650 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$856378a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-04 14:37:00.384  INFO 13650 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-08-04 14:37:00.385  INFO 13650 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-04 14:37:00.385  INFO 13650 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-08-04 14:37:00.389  INFO 13650 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-04 14:37:00.390  INFO 13650 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 295 ms
+2018-08-04 14:37:00.406  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-04 14:37:00.406  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-04 14:37:00.406  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-04 14:37:00.406  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-04 14:37:00.406  INFO 13650 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-04 14:37:00.450  INFO 13650 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2018-08-04 14:37:00.453  INFO 13650 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2018-08-04 14:37:00.460  INFO 13650 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-08-04 14:37:00.460  INFO 13650 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-08-04 14:37:00.476  INFO 13650 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-08-04 14:37:00.592  INFO 13650 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-08-04 14:37:00.764  INFO 13650 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-04 14:37:00.897  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4c540c64: startup date [Sat Aug 04 14:37:00 EDT 2018]; root of context hierarchy
+2018-08-04 14:37:00.906  WARN 13650 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-08-04 14:37:00.911  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.pingsunyi.techblog.web.IndexController.index()
+2018-08-04 14:37:00.911  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog],methods=[GET]}" onto public java.lang.String com.pingsunyi.techblog.web.IndexController.blog()
+2018-08-04 14:37:00.911  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.pingsunyi.techblog.web.admin.BlogController.blogs()
+2018-08-04 14:37:00.912  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.pingsunyi.techblog.web.admin.LoginController.loginPage()
+2018-08-04 14:37:00.912  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.pingsunyi.techblog.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-08-04 14:37:00.912  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.pingsunyi.techblog.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
+2018-08-04 14:37:00.913  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-04 14:37:00.914  INFO 13650 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-04 14:37:00.932  INFO 13650 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-04 14:37:00.932  INFO 13650 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-04 14:37:00.938  INFO 13650 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2018-08-04 14:37:00.968  INFO 13650 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2018-08-04 14:37:01.085  INFO 13650 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-08-04 14:37:01.100  INFO 13650 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-04 14:37:01.100  INFO 13650 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-04 14:37:01.103  INFO 13650 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-08-04 14:37:01.107  INFO 13650 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-04 14:37:01.107  INFO 13650 --- [restartedMain] c.p.techblog.TechblogApplication         : Started TechblogApplication in 1.042 seconds (JVM running for 23680.908)
+2018-08-04 14:37:01.109  INFO 13650 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2018-08-04 14:37:05.510  INFO 13650 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-04 14:37:05.510  INFO 13650 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-04 14:37:05.517  INFO 13650 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 7 ms
+2018-08-04 14:37:36.385  INFO 13650 --- [http-nio-8080-exec-7] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory

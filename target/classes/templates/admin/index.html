@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css">
-    <link rel="stylesheet" href="../static/css/mystyle.css">
+    <link rel="stylesheet" href="../../static/css/mystyle.css">
 </head>
 <body>
 
@@ -24,11 +24,11 @@
                 <div class="right m-item m-mobile-hide menu">
                     <div class="ui dropdown item">
                         <div class="text">
-                            <img src="../static/images/avatar.png" alt="" class="ui avatar image">Sunny Ping
+                            <img src="../../static/images/avatar.png" alt="" class="ui avatar image" th:src="/images/avatar.png">Sunny Ping
                         </div>
                         <i class="dropdown icon"></i>
                         <div class="menu">
-                            <a href="#" class="item">Sign Out</a>
+                            <a href="#" th:href="@{/admin/logout}" class="item">Sign Out</a>
                         </div>
                     </div>
                 </div>
@@ -42,17 +42,6 @@
         </a>
     </nav>
 
-    <!--二级导航-->
-    <!--secondary navigation bar-->
-    <div class="ui attached pointing menu">
-        <div class="ui container">
-            <div class="right menu">
-                <a href="#" class="item">Post</a>
-                <a href="#" class="active pink item">List</a>
-            </div>
-        </div>
-    </div>
-
 
     <!--中间部分内容-->
     <!--main content-->
@@ -62,11 +51,9 @@
                 <h2>Welcome, </h2>
                 <p>Sunny Ping!</p>
             </div>
-            <img src="https://unsplash.it/1000/400?image=791"" alt="" class="ui rounded bordered fluid image">
+            <img src="https://unsplash.it/1000/400?image=791" alt="" class="ui rounded bordered fluid image">
         </div>
     </div>
-    <br>
-    <br>
 
 
     <!--底部-->
