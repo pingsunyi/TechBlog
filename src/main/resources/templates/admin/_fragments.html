@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <!--fit for mobile end-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:replace="${title}">Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
+    <link rel="stylesheet" href="../static/css/animate.css" th:href="@{/css/animate.css}">
+    <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
+    <link rel="stylesheet" href="../static/css/mystyle.css" th:href="@{/css/mystyle.css}">
+</head>
+<body>
+    <!--导航-->
+    <!--navigator-->
+    <nav th:fragment="menu(n)" class="ui inverted vertical segment m-padding-tb-tiny m-shadow-small">
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <h1 class="ui pink header item">Admin</h1>
+                <!--导航菜单-->
+                <!--navigation menu-->
+                <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class="tiny home icon"></i>Blogs</a>
+                <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class="tiny idea icon"></i>Types</a>
+                <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class="tiny tags icon"></i>Tags</a>
+                <div class="right m-item m-mobile-hide menu">
+                    <div class="ui dropdown item">
+                        <div class="text">
+                            <img src="../static/images/avatar.png" alt="" class="ui avatar image">Sunny Ping
+                        </div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a href="#" class="item">Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--移动端菜单-->
+        <!--sidebar of mobile end-->
+        <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+
+    <!--二级导航-->
+    <!--secondary navigation bar-->
+    <div class="ui attached pointing menu">
+        <div class="ui container">
+            <div class="right menu">
+                <a href="#" class="item">Post</a>
+                <a href="#" class="active pink item">List</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--底部-->
+    <!--footer-->
+    <footer th:fragment="footer" class="ui inverted vertical segment m-padding-tb-massive">
+        <div class="ui center aligned container">
+
+            <!--底部导航栏-->
+            <!--three grid content-->
+            <div class="ui divided stackable grid">
+                <!--社群-->
+                <!--community-->
+                <div class="four wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced m-opacity-small">Community</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">CSDN</a>
+                        <a href="#" class="item">github</a>
+                        <a href="#" class="item">RPI</a>
+                    </div>
+                </div>
+                <!--联系方式-->
+                <!--contact-->
+                <div class="four wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced m-opacity-small">Contact</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Facebook</a>
+                        <a href="#" class="item">LinkedIn</a>
+                    </div>
+                </div>
+                <!--自我介绍-->
+                <!--introduction-->
+                <div class="eight wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced m-opacity-small">Sunny Ping</h4>
+                    <p class="m-text-thin m-text-spaced m-opacity-medium">This is my personal blog, where any ideas about coding and writing will be shared here!</p>
+                </div>
+            </div>
+
+            <!--版权声明-->
+            <!--copyright-->
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaced m-opacity-small">Designed and developed by Sunny Ping.</p>
+            <p class="m-text-thin m-text-spaced m-opacity-small">Copyright©2017-2018 All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <!--JavaScript资源-->
+    <!--JavaScript source-->
+    <th:block th:fragment="script">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+        <script src="../static/lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script>
+        <script src="../static/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
+    </th:block>
+
+
+</body>
+</html>

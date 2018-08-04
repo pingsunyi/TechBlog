@@ -45,3 +45,20 @@
 2018-08-04 01:26:01.163  INFO 13650 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2018-08-04 01:26:01.163  INFO 13650 --- [restartedMain] c.p.techblog.TechblogApplication         : Started TechblogApplication in 1.406 seconds (JVM running for 11451.642)
 2018-08-04 01:26:01.165  INFO 13650 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2018-08-04 02:32:25.832  WARN 13650 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=30m25s349ms).
+2018-08-04 03:09:13.454  WARN 13650 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=36m17s614ms).
+2018-08-04 03:40:27.082  WARN 13650 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=30m43s622ms).
+2018-08-04 04:18:26.725  WARN 13650 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=37m59s643ms).
+2018-08-04 04:55:08.328  WARN 13650 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=36m11s602ms).
+2018-08-04 05:32:49.953  WARN 13650 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=37m11s614ms).
+2018-08-04 06:08:31.566  WARN 13650 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=35m11s611ms).
+2018-08-04 06:47:43.175  WARN 13650 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=38m41s607ms).
+2018-08-04 07:22:20.758  WARN 13650 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=34m7s581ms).
+2018-08-04 07:53:00.383  WARN 13650 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=30m9s617ms).
+2018-08-04 08:24:34.987  WARN 13650 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=31m4s602ms).
+2018-08-04 08:57:58.608  WARN 13650 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=33m23s621ms).
+2018-08-04 09:36:08.225  WARN 13650 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=37m39s614ms).
+2018-08-04 10:16:34.388  WARN 13650 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=39m56s160ms).
+2018-08-04 10:48:10.997  WARN 13650 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=31m6s607ms).
+2018-08-04 11:20:02.612  WARN 13650 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=31m21s613ms).
+2018-08-04 11:39:17.889  WARN 13650 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=19m15s277ms).

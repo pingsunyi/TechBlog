@@ -12,7 +12,7 @@
 
     <!--导航-->
     <!--navigator-->
-    <nav th:replace="admin/_fragments :: menu(1)" class="ui inverted vertical segment m-padding-tb-tiny m-shadow-small">
+    <nav th:replace="admin/_fragments :: menu(0)" class="ui inverted vertical segment m-padding-tb-tiny m-shadow-small">
         <div class="ui container">
             <div class="ui inverted secondary stackable menu">
                 <h1 class="ui pink header item">Admin</h1>
@@ -58,84 +58,11 @@
     <!--main content-->
     <div class="m-container-small m-padding-tb-big">
         <div class="ui container">
-
-            <!--查询表单-->
-            <!--search form-->
-            <form action="#" method="post" class="ui segment form">
-                <div class="inline fields">
-                    <!--标题-->
-                    <!--title-->
-                    <div class="field">
-                        <input type="text" name="title" placeholder="Title">
-                    </div>
-                    <!--分类-->
-                    <!--type-->
-                    <div class="field">
-                        <div class="ui selection dropdown">
-                            <input type="hidden" name="type">
-                            <i class="dropdown icon"></i>
-                            <div class="default text">Type</div>
-                            <div class="menu">
-                                <div class="item" data-value="1">Blog</div>
-                                <div class="item" data-value="2">Note</div>
-                                <div class="item" data-value="3">Diary</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--是否推荐-->
-                    <!--if recommend-->
-                    <div class="field">
-                        <div class="ui checkbox">
-                            <input type="checkbox" id="recommend" name="recommend">
-                            <label for="recommend">Recommend</label>
-                        </div>
-                    </div>
-                    <!--搜索按钮-->
-                    <!--search button-->
-                    <div class="field">
-                        <button class="ui pink basic button"><i class="search icon"></i>Search</button>
-                    </div>
-                </div>
-            </form>
-
-            <!--博客列表-->
-            <!--list of blogs-->
-            <table class="ui table">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Title</th>
-                        <th>Type</th>
-                        <th>Recommend</th>
-                        <th>Update Time</th>
-                        <th>Operation</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>My First Blog</td>
-                        <td>Blog</td>
-                        <td>Yes</td>
-                        <td>08-01-2018 17:00</td>
-                        <td>
-                            <a href="#" class="ui tiny pink basic button">Edit</a>
-                            <a href="#" class="ui tiny red basic button">Delete</a>
-                        </td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                <tr>
-                    <th colspan="6">
-                        <div class="ui tiny pagination menu">
-                            <a href="" class="item">Prev</a>
-                            <a href="" class="item">Next</a>
-                        </div>
-                        <a href="#" class="ui tiny right floated pink basic button">Add</a>
-                    </th>
-                </tr>
-                </tfoot>
-            </table>
+            <div class="ui success large message">
+                <h2>Welcome, </h2>
+                <p>Sunny Ping!</p>
+            </div>
+            <img src="https://unsplash.it/1000/400?image=791"" alt="" class="ui rounded bordered fluid image">
         </div>
     </div>
     <br>
@@ -186,10 +113,13 @@
     </footer>
 
 
+
     <!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js"></script>
     <!--/*/</th:block>/*/-->
+
+
 
     <script>
         $('.menu.toggle').click(function () {
