@@ -20,9 +20,9 @@
                 <h1 class="ui pink header item">Admin</h1>
                 <!--导航菜单-->
                 <!--navigation menu-->
-                <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class="tiny home icon"></i>Blogs</a>
-                <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class="tiny idea icon"></i>Types</a>
-                <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class="tiny tags icon"></i>Tags</a>
+                <a href="#" th:href="@{/admin/blogs}" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class="tiny home icon"></i>Blogs</a>
+                <a href="#" th:href="@{/admin/types}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class="tiny idea icon"></i>Types</a>
+                <a href="#" th:href="@{/admin/tags}" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class="tiny tags icon"></i>Tags</a>
                 <div class="right m-item m-mobile-hide menu">
                     <div class="ui dropdown item">
                         <div class="text">

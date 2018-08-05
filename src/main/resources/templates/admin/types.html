@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="admin/_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <!--fit for mobile end-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../static/css/mystyle.css">
+</head>
+<body>
+
+    <!--导航-->
+    <!--navigator-->
+    <nav th:replace="admin/_fragments :: menu(2)" class="ui inverted vertical segment m-padding-tb-tiny m-shadow-small">
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <h1 class="ui pink header item">Admin</h1>
+                <!--导航菜单-->
+                <!--navigation menu-->
+                <a href="#" class="active m-item item m-mobile-hide"><i class="tiny home icon"></i>Blogs</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="tiny idea icon"></i>Types</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="tiny tags icon"></i>Tags</a>
+                <div class="right m-item m-mobile-hide menu">
+                    <div class="ui dropdown item">
+                        <div class="text">
+                            <img src="../static/images/avatar.png" alt="" class="ui avatar image">Sunny Ping
+                        </div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a href="#" th:href="@{/admin/logout}" class="item">Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--移动端菜单-->
+        <!--sidebar of mobile end-->
+        <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+
+    <!--二级导航-->
+    <!--secondary navigation bar-->
+    <div class="ui attached pointing menu">
+        <div class="ui container">
+            <div class="right menu">
+                <a href="#" th:href="@{/admin/types/input}" class="item">Add</a>
+                <a href="#" th:href="@{/admin/types}" class="active pink item">List</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--中间部分内容-->
+    <!--main content-->
+    <div class="m-container-small m-padding-tb-big">
+        <div class="ui container">
+
+            <div class="ui success message"  th:unless="${#strings.isEmpty(message)}">
+                <i class="close icon"></i>
+                <div class="header">Congratulations,</div>
+                <p th:text="${message}">You have added a new type!</p>
+            </div>
+
+            <!--分类列表-->
+            <!--list of types-->
+            <table class="ui table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Operation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="type,iterStat : ${page.content}">
+                        <td th:text="${iterStat.count}">1</td>
+                        <td th:text="${type.name}">Diary</td>
+                        <td>
+                            <a href="#" th:href="@{/admin/types/{id}/input(id=${type.id})}" class="ui tiny pink basic button">Edit</a>
+                            <a href="#" th:href="@{/admin/types/{id}/delete(id=${type.id})}" class="ui tiny red basic button">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th colspan="3">
+                        <div class="ui tiny pagination menu" th:if="${page.totalPages}>1">
+                            <a th:href="@{/admin/types(page=${page.number}-1)}" href="" class="item" th:unless="${page.first}">Prev</a>
+                            <a th:href="@{/admin/types(page=${page.number}+1)}" href="" class="item" th:unless="${page.last}">Next</a>
+                        </div>
+                        <a href="#" th:href="@{/admin/types/input}" class="ui tiny right floated pink basic button">Add</a>
+                    </th>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <br>
+    <br>
+
+
+    <!--底部-->
+    <!--footer-->
+    <footer th:replace="admin/_fragments :: footer" class="ui inverted vertical segment m-padding-tb-massive">
+        <div class="ui center aligned container">
+
+            <!--底部导航栏-->
+            <!--three grid content-->
+            <div class="ui divided stackable grid">
+                <!--社群-->
+                <!--community-->
+                <div class="four wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced m-opacity-small">Community</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">CSDN</a>
+                        <a href="#" class="item">github</a>
+                        <a href="#" class="item">RPI</a>
+                    </div>
+                </div>
+                <!--联系方式-->
+                <!--contact-->
+                <div class="four wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced m-opacity-small">Contact</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Facebook</a>
+                        <a href="#" class="item">LinkedIn</a>
+                    </div>
+                </div>
+                <!--自我介绍-->
+                <!--introduction-->
+                <div class="eight wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced m-opacity-small">Sunny Ping</h4>
+                    <p class="m-text-thin m-text-spaced m-opacity-medium">This is my personal blog, where any ideas about coding and writing will be shared here!</p>
+                </div>
+            </div>
+
+            <!--版权声明-->
+            <!--copyright-->
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaced m-opacity-small">Designed and developed by Sunny Ping.</p>
+            <p class="m-text-thin m-text-spaced m-opacity-small">Copyright©2017-2018 All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js"></script>
+    <!--/*/</th:block>/*/-->
+
+    <script>
+        $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-mobile-hide');
+        });
+
+        $('.ui.dropdown').dropdown({
+            on : 'hover'
+        });
+
+        // 关闭消息提示
+        // close the notification
+        $('.message .close')
+            .on('click', function () {
+                $(this)
+                    .closest('.message')
+                    .transition('fade');
+        });
+
+
+    </script>
+
+</body>
+</html>
