@@ -24,6 +24,8 @@ public class TypeController {
     @Autowired
     private TypeService typeService;
 
+    // 跳转到"分类"页面
+    // direct to types page
     @GetMapping("/types")
     public String types(@PageableDefault(size = 3, sort = {"id"}, direction = Sort.Direction.DESC)
                                     Pageable pageable, Model model) {
@@ -31,18 +33,24 @@ public class TypeController {
         return "admin/types";
     }
 
+    // 跳转到"添加分类"页面
+    // direct to types-input page
     @GetMapping("/types/input")
     public String input(Model model) {
         model.addAttribute("type", new Type());
         return "admin/types-input";
     }
 
+    // 跳转到"编辑分类"页面
+    // direct to edit types page
     @GetMapping("/types/{id}/input")
     public String editInput(@PathVariable Long id, Model model) {
         model.addAttribute("type", typeService.getType(id));
         return "admin/types-input";
     }
 
+    // 发布分类
+    // post type
     @PostMapping("/types")
     public String post(@Valid Type type, BindingResult result, RedirectAttributes attributes) {
         Type type1 = typeService.getTypeByName(type.getName());
@@ -54,13 +62,15 @@ public class TypeController {
         }
         Type t = typeService.saveType(type);
         if (t == null) {
-            attributes.addFlashAttribute("message", "Fail to add a new type");
+            attributes.addFlashAttribute("message", "Fail to add this type");
         } else {
-            attributes.addFlashAttribute("message", "Succeed to add a new type");
+            attributes.addFlashAttribute("message", "Succeed to add this type");
         }
         return "redirect:/admin/types";
     }
 
+    // 编辑并发布分类
+    // edit and post type
     @PostMapping("/types/{id}")
     public String editPost(@Valid Type type, BindingResult result, @PathVariable Long id, RedirectAttributes attributes) {
         Type type1 = typeService.getTypeByName(type.getName());
