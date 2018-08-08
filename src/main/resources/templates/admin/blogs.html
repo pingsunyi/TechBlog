@@ -10,6 +10,7 @@
 </head>
 <body>
 
+
     <!--导航-->
     <!--navigator-->
     <nav th:replace="admin/_fragments :: menu(1)" class="ui inverted vertical segment m-padding-tb-tiny m-shadow-small">
@@ -47,8 +48,8 @@
     <div class="ui attached pointing menu">
         <div class="ui container">
             <div class="right menu">
-                <a href="#" class="item">Post</a>
-                <a href="#" class="active pink item">List</a>
+                <a href="#" th:href="@{/admin/blogs/input}" class="item">Post</a>
+                <a href="#" th:href="@{/admin/blogs}" class="active pink item">List</a>
             </div>
         </div>
     </div>
@@ -61,7 +62,8 @@
 
             <!--查询表单-->
             <!--search form-->
-            <form action="#" method="post" class="ui segment form">
+            <div class="ui secondary segment form">
+                <input type="hidden" name="page">
                 <div class="inline fields">
                     <!--标题-->
                     <!--title-->
@@ -72,13 +74,15 @@
                     <!--type-->
                     <div class="field">
                         <div class="ui selection dropdown">
-                            <input type="hidden" name="type">
+                            <input type="hidden" name="typeId">
                             <i class="dropdown icon"></i>
                             <div class="default text">Type</div>
                             <div class="menu">
-                                <div class="item" data-value="1">Blog</div>
+                                <div th:each="type : ${types}" class="item" data-value="1" th:data-value="${type.id}" th:text="${type.name}">Blog</div>
+                                <!--/*-->
                                 <div class="item" data-value="2">Note</div>
                                 <div class="item" data-value="3">Diary</div>
+                                <!--*/-->
                             </div>
                         </div>
                     </div>
@@ -93,15 +97,15 @@
                     <!--搜索按钮-->
                     <!--search button-->
                     <div class="field">
-                        <button class="ui pink basic button"><i class="search icon"></i>Search</button>
+                        <button type="button" id="search-btn" class="ui pink basic button"><i class="search icon"></i>Search</button>
                     </div>
                 </div>
-            </form>
-
+            </div>
             <!--博客列表-->
             <!--list of blogs-->
-            <table class="ui table">
-                <thead>
+            <div id="table-container">
+                <table th:fragment="blogList" class="ui compact pink table">
+                    <thead>
                     <tr>
                         <th></th>
                         <th>Title</th>
@@ -110,32 +114,35 @@
                         <th>Update Time</th>
                         <th>Operation</th>
                     </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>My First Blog</td>
-                        <td>Blog</td>
-                        <td>Yes</td>
-                        <td>08-01-2018 17:00</td>
+                    </thead>
+                    <tbody>
+                    <tr th:each="blog,iterStat : ${page.content}">
+                        <td th:text="${iterStat.count}">1</td>
+                        <td th:text="${blog.title}">My First Blog</td>
+                        <td th:text="${blog.type.name}">Blog</td>
+                        <td th:text="${blog.recommend} ? 'Yes':'No'">Yes</td>
+                        <td th:text="${blog.updateTime}">08-01-2018 17:00</td>
                         <td>
-                            <a href="#" class="ui tiny pink basic button">Edit</a>
-                            <a href="#" class="ui tiny red basic button">Delete</a>
+                            <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui tiny pink basic button">Edit</a>
+                            <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" class="ui tiny red basic button">Delete</a>
                         </td>
                     </tr>
-                </tbody>
-                <tfoot>
-                <tr>
-                    <th colspan="6">
-                        <div class="ui tiny pagination menu">
-                            <a href="" class="item">Prev</a>
-                            <a href="" class="item">Next</a>
-                        </div>
-                        <a href="#" class="ui tiny right floated pink basic button">Add</a>
-                    </th>
-                </tr>
-                </tfoot>
-            </table>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <th colspan="6">
+                            <div class="ui tiny pagination menu" th:if="${page.totalPages}>1">
+                                <a onclick="page(this)" th:attr="data-page=${page.number}-1" class="item" th:unless="${page.first}">Prev</a>
+                                <a onclick="page(this)" th:attr="data-page=${page.number}+1" class="item" th:unless="${page.last}">Next</a>
+                            </div>
+                            <a href="#" th:href="@{/admin/blogs/input}" class="ui tiny right floated pink basic button">Add</a>
+                        </th>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+
         </div>
     </div>
     <br>
@@ -200,6 +207,23 @@
             on : 'hover'
         });
 
+        function page(obj) {
+            $("[name='page']").val($(obj).data("page"));
+            loaddata();
+        }
+
+        $("#search-btn").click(function () {
+            loaddata();
+        });
+
+        function loaddata() {
+            $("#table-container").load(/*[[@{/admin/blogs/search}]]*/"/admin/blogs/search",{
+                title : $("[name='title']").val(),
+                typeId : $("[name='typeId']").val(),
+                recommend : $("[name='recommend']").prop('checked'),
+                page : $("[name='page']").val()
+            });
+        }
 
     </script>
 

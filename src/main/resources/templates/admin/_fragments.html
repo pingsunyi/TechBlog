@@ -26,7 +26,8 @@
                 <div class="right m-item m-mobile-hide menu">
                     <div class="ui dropdown item">
                         <div class="text">
-                            <img src="../static/images/avatar.png" alt="" class="ui avatar image">Sunny Ping
+                            <img src="../static/images/avatar.png" alt="" class="ui avatar image" th:src="@{${session.user.avatar}}">
+                            <span th:text="${session.user.nickname}">Sunny Ping</span>
                         </div>
                         <i class="dropdown icon"></i>
                         <div class="menu">
@@ -106,8 +107,8 @@
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js"></script>
         <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
-        <script src="../static/lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script>
-        <script src="../static/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
+        <script src="../../static/lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script>
+        <script src="../../static/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
     </th:block>
 
 
