@@ -48,8 +48,8 @@
     <div class="ui attached pointing menu">
         <div class="ui container">
             <div class="right menu">
-                <a href="#" class="active pink item">Post</a>
-                <a href="#" class="item">List</a>
+                <a href="#" th:href="@{/admin/blogs/input}" class="active pink item">Post</a>
+                <a href="#" th:href="@{/admin/blogs}" class="item">List</a>
             </div>
         </div>
     </div>
@@ -261,6 +261,8 @@
             $('[name="publish"]').val(true);
             $('#blog-form').submit();
         });
+
+
 
         // 表单验证
         // form validation
