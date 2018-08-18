@@ -4,6 +4,7 @@ import com.pingsunyi.techblog.NotFoundException;
 import com.pingsunyi.techblog.dao.BlogRepository;
 import com.pingsunyi.techblog.po.Blog;
 import com.pingsunyi.techblog.po.Type;
+import com.pingsunyi.techblog.util.MyBeanUtils;
 import com.pingsunyi.techblog.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -77,7 +78,8 @@ public class BlogServiceImpl implements BlogService {
         if (b == null) {
             throw new NotFoundException("This blog does not exist");
         }
-        BeanUtils.copyProperties(b, blog);
+        BeanUtils.copyProperties(blog, b, MyBeanUtils.getNullPropertyNames(blog));
+        b.setUpdateTime(new Date());
         return blogRepository.save(b);
     }
 

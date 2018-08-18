@@ -131,6 +131,12 @@
                     </div>
                 </div>
 
+                <!--描述-->
+                <!--description-->
+                <div class="required field">
+                    <textarea name="description" th:text="*{description}" placeholder="Description..." maxlength="200"></textarea>
+                </div>
+
                 <!--四个选项-->
                 <!--four options-->
                 <div class="inline fields">
@@ -294,6 +300,13 @@
                     rules : [{
                         type : 'empty',
                         prompt : 'Please input the picture url'
+                    }]
+                },
+                description : {
+                    identifier: 'description',
+                    rules: [{
+                        type : 'empty',
+                        prompt: 'Please input the description'
                     }]
                 }
             }
