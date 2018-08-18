@@ -73,18 +73,22 @@
                     <!--分类-->
                     <!--type-->
                     <div class="field">
-                        <div class="ui selection dropdown">
-                            <input type="hidden" name="typeId">
-                            <i class="dropdown icon"></i>
-                            <div class="default text">Type</div>
-                            <div class="menu">
-                                <div th:each="type : ${types}" class="item" data-value="1" th:data-value="${type.id}" th:text="${type.name}">Blog</div>
-                                <!--/*-->
-                                <div class="item" data-value="2">Note</div>
-                                <div class="item" data-value="3">Diary</div>
-                                <!--*/-->
+                        <div class="ui labeled action input">
+                            <div class="ui type selection dropdown">
+                                <input type="hidden" name="typeId">
+                                <i class="dropdown icon"></i>
+                                <div class="default text">Type</div>
+                                <div class="menu">
+                                    <div th:each="type : ${types}" class="item" data-value="1" th:data-value="${type.id}" th:text="${type.name}">Blog</div>
+                                    <!--/*-->
+                                    <div class="item" data-value="2">Note</div>
+                                    <div class="item" data-value="3">Diary</div>
+                                    <!--*/-->
+                                </div>
                             </div>
+                            <button id="clear-btn" class="ui compact button">Clear</button>
                         </div>
+
                     </div>
                     <!--是否推荐-->
                     <!--if recommend-->
@@ -111,6 +115,7 @@
                         <th>Title</th>
                         <th>Type</th>
                         <th>Recommend</th>
+                        <th>Status</th>
                         <th>Update Time</th>
                         <th>Operation</th>
                     </tr>
@@ -121,6 +126,7 @@
                         <td th:text="${blog.title}">My First Blog</td>
                         <td th:text="${blog.type.name}">Blog</td>
                         <td th:text="${blog.recommend} ? 'Yes':'No'">Yes</td>
+                        <td th:text="${blog.publish} ? 'Published':'Draft'">Draft</td>
                         <td th:text="${blog.updateTime}">08-01-2018 17:00</td>
                         <td>
                             <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui tiny pink basic button">Edit</a>
@@ -130,7 +136,7 @@
                     </tbody>
                     <tfoot>
                     <tr>
-                        <th colspan="6">
+                        <th colspan="7">
                             <div class="ui tiny pagination menu" th:if="${page.totalPages}>1">
                                 <a onclick="page(this)" th:attr="data-page=${page.number}-1" class="item" th:unless="${page.first}">Prev</a>
                                 <a onclick="page(this)" th:attr="data-page=${page.number}+1" class="item" th:unless="${page.last}">Next</a>
@@ -140,6 +146,12 @@
                     </tr>
                     </tfoot>
                 </table>
+
+                <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+                    <i class="close icon"></i>
+                    <div class="header">Congratulations,</div>
+                    <p th:text="${message}">The new blog has been posted!</p>
+                </div>
             </div>
 
 
@@ -207,12 +219,28 @@
             on : 'hover'
         });
 
+        // 消息提示关闭初始化
+        // initialize the closing of message
+        $('.message .close').on('click', function () {
+            $(this)
+                .closest('.message')
+                .transition('fade');
+        });
+
+
+        $('#clear-btn').on('click', function() {
+            $('.ui.type.dropdown')
+                .dropdown('clear')
+            ;
+        });
+
         function page(obj) {
             $("[name='page']").val($(obj).data("page"));
             loaddata();
         }
 
         $("#search-btn").click(function () {
+            $("[name='page']").val(0);
             loaddata();
         });
 
