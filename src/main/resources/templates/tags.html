@@ -12,7 +12,7 @@
 
     <!--导航-->
     <!--navigator-->
-    <nav class="ui inverted vertical segment m-padding-tb-tiny m-shadow-small">
+    <nav th:replace="_fragments :: menu(3)" class="ui inverted vertical segment m-padding-tb-tiny m-shadow-small">
         <div class="ui container">
             <div class="ui inverted secondary stackable menu">
                 <h1 class="ui pink header item">Sunny</h1>
@@ -56,7 +56,7 @@
                         <h2 class="ui pink header">Type</h2>
                     </div>
                     <div class="right aligned column">
-                        <h2 class="ui pink header m-inline-block">1 </h2> posts
+                        <h2 class="ui pink header m-inline-block" th:text="${#arrays.length(tags)}">1 </h2> posts
                     </div>
                 </div>
             </div>
@@ -64,24 +64,25 @@
             <!--所有标签-->
             <!--all the tags-->
             <div class="ui attached segment m-padding-tb-large">
-                <a href="#" target="_blank" class="ui pink left pointing large label m-margin-tb-tiny">CSS <div class="detail">6</div></a>
-                <a href="#" target="_blank" class="ui left pointing large label m-margin-tb-tiny">Java <div class="detail">12</div></a>
-                <a href="#" target="_blank" class="ui left pointing large label m-margin-tb-tiny">C++ <div class="detail">9</div></a>
-                <a href="#" target="_blank" class="ui left pointing large label m-margin-tb-tiny">Python <div class="detail">18</div></a>
+                <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" class="ui left pointing large label m-margin-tb-tiny" th:classappend="${tag.id==activeTagId} ? 'pink'" th:each="tag : ${tags}">
+                    <span th:text="${tag.name}">CSS</span> <div class="detail" th:text="${#arrays.length(tag.blogs)}">6</div>
+                </a>
             </div>
+            
 
             <!--博客列表-->
             <!--list of blogs-->
             <div class="ui top attached pink segment">
+
                 <!--单个博客-->
                 <!--single blog-->
-                <div class="ui padded vertical segment m-padding-tb-large m-padding-lr-medium-responsive">
-                    <div class="ui mobile reversed stackable grid">
+                <div class="ui padded vertical segment m-padding-tb-large m-padding-lr-medium-responsive" th:each="blog : ${page.content}">
+                    <div class="ui middle aligned mobile reversed stackable grid">
                         <!--文字部分-->
                         <!--text-->
                         <div class="eleven wide column">
-                            <h3 class="ui header">My First Blog</h3>
-                            <p class="m-text">This is my first blog, hello world!</p>
+                            <h3 class="ui header"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black" th:text="${blog.title}">My First Blog</a></h3>
+                            <p class="m-text" th:text="|${blog.description}...|">This is my first blog, hello world!</p>
                             <!--博客相关信息-->
                             <!--info of the blog-->
                             <div class="ui stackable grid">
@@ -91,143 +92,43 @@
                                     <div class="eleven wide column">
                                         <div class="ui tiny horizontal link list">
                                             <div class="item">
-                                                <img src="https://unsplash.it/100/100?image=838" alt="" class="ui avatar image">
-                                                <div class="content"><a href="#" class="header">Sunny</a></div>
+                                                <img src="https://unsplash.it/100/100?image=838" th:src="@{${blog.user.avatar}}" alt="" class="ui avatar image">
+                                                <div class="content"><a href="#" class="header" th:text="@{${blog.user.nickname}}">Sunny</a></div>
+                                            </div>
+
+                                            <div class="item">
+                                                <i class="calendar icon"></i><span th:text="${#dates.format(blog.updateTime, 'yyyy-MM-dd')}">08-01-2018</span>
                                             </div>
                                             <div class="item">
-                                                <i class="calendar icon"></i> 08-01-2018
-                                            </div>
-                                            <div class="item">
-                                                <i class="eye icon"></i> 2342
+                                                <i class="eye icon"></i><span th:text="${blog.views}">2342</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <!--更多信息-->
-                                    <!--more info-->
+
+                                    <!--详情-->
+                                    <!--more-->
                                     <div class="right aligned five wide column">
-                                        <a href="#" class="ui tiny pink button m-padding m-text-thin" target="_blank" >More</a>
+                                        <a href="#" class="ui tiny basic pink button m-padding" target="_blank" th:text="${blog.type.name}">More</a>
                                     </div>
                                 </div>
+
                                 <!--标签信息-->
                                 <!--tags info-->
                                 <div class="row">
                                     <div class="column">
-                                        <a href="#" class="ui mini basic pink button m-padding m-text-thin">C++</a>
+                                        <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" class="ui basic left pointing button m-padding-tiny m-text-thin" th:classappend="${tag.id==activeTagId} ? 'pink'" th:each="tag : ${blog.tags}" th:text="${tag.name}">CSS</a>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
+
+
                         <!--图片部分-->
                         <!--picture-->
                         <div class="five wide column">
-                            <a href="#" target="_blank">
-                                <img src="https://unsplash.it/800/450?image=1067" alt="" class="ui rounded image">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!--单个博客-->
-                <!--single blog-->
-                <div class="ui padded vertical segment m-padding-tb-large m-padding-lr-medium-responsive">
-                    <div class="ui mobile reversed stackable grid">
-                        <!--文字部分-->
-                        <!--text-->
-                        <div class="eleven wide column">
-                            <h3 class="ui header">My First Blog</h3>
-                            <p class="m-text">This is my first blog, hello world!</p>
-                            <!--博客相关信息-->
-                            <!--info of the blog-->
-                            <div class="ui stackable grid">
-                                <div class="row">
-                                    <!--文字信息-->
-                                    <!--text info-->
-                                    <div class="eleven wide column">
-                                        <div class="ui tiny horizontal link list">
-                                            <div class="item">
-                                                <img src="https://unsplash.it/100/100?image=838" alt="" class="ui avatar image">
-                                                <div class="content"><a href="#" class="header">Sunny</a></div>
-                                            </div>
-                                            <div class="item">
-                                                <i class="calendar icon"></i> 08-01-2018
-                                            </div>
-                                            <div class="item">
-                                                <i class="eye icon"></i> 2342
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--更多信息-->
-                                    <!--more info-->
-                                    <div class="right aligned five wide column">
-                                        <a href="#" class="ui tiny pink button m-padding m-text-thin" target="_blank" >More</a>
-                                    </div>
-                                </div>
-                                <!--标签信息-->
-                                <!--tags info-->
-                                <div class="row">
-                                    <div class="column">
-                                        <a href="#" class="ui mini basic pink button m-padding m-text-thin">C++</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--图片部分-->
-                        <!--picture-->
-                        <div class="five wide column">
-                            <a href="#" target="_blank">
-                                <img src="https://unsplash.it/800/450?image=1067" alt="" class="ui rounded image">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!--单个博客-->
-                <!--single blog-->
-                <div class="ui padded vertical segment m-padding-tb-large m-padding-lr-medium-responsive">
-                    <div class="ui mobile reversed stackable grid">
-                        <!--文字部分-->
-                        <!--text-->
-                        <div class="eleven wide column">
-                            <h3 class="ui header">My First Blog</h3>
-                            <p class="m-text">This is my first blog, hello world!</p>
-                            <!--博客相关信息-->
-                            <!--info of the blog-->
-                            <div class="ui stackable grid">
-                                <div class="row">
-                                    <!--文字信息-->
-                                    <!--text info-->
-                                    <div class="eleven wide column">
-                                        <div class="ui tiny horizontal link list">
-                                            <div class="item">
-                                                <img src="https://unsplash.it/100/100?image=838" alt="" class="ui avatar image">
-                                                <div class="content"><a href="#" class="header">Sunny</a></div>
-                                            </div>
-                                            <div class="item">
-                                                <i class="calendar icon"></i> 08-01-2018
-                                            </div>
-                                            <div class="item">
-                                                <i class="eye icon"></i> 2342
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--更多信息-->
-                                    <!--more info-->
-                                    <div class="right aligned five wide column">
-                                        <a href="#" class="ui tiny pink button m-padding m-text-thin" target="_blank" >More</a>
-                                    </div>
-                                </div>
-                                <!--标签信息-->
-                                <!--tags info-->
-                                <div class="row">
-                                    <div class="column">
-                                        <a href="#" class="ui mini basic pink button m-padding m-text-thin">C++</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--图片部分-->
-                        <!--picture-->
-                        <div class="five wide column">
-                            <a href="#" target="_blank">
-                                <img src="https://unsplash.it/800/450?image=1067" alt="" class="ui rounded image">
+                            <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
+                                <img src="https://unsplash.it/800/450?image=1067" th:src="@{${blog.firstPicture}}" alt="" class="ui rounded image">
                             </a>
                         </div>
                     </div>
@@ -235,27 +136,33 @@
 
             </div>
 
+
             <!--底部，上下翻页-->
             <!--footer, prev & next-->
-            <div class="ui bottom attached segment">
+            <div class="ui bottom attached segment" th:if="${page.totalPages}>1">
                 <div class="ui middle aligned two column grid">
                     <div class="left aligned column">
-                        <a href="#" class="ui tiny basic pink button">Prev</a>
+                        <a href="#" th:href="@{/(page=${page.number}-1)}" th:unless="${page.first}" class="ui tiny basic pink button">Prev</a>
                     </div>
                     <div class="right aligned column">
-                        <a href="#" class="ui tiny basic pink button">Next</a>
+                        <a href="#" th:href="@{/(page=${page.number}+1)}" th:unless="${page.last}" class="ui tiny basic pink button">Next</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
+
     <br>
     <br>
 
 
     <!--底部-->
     <!--footer-->
-    <footer class="ui inverted vertical segment m-padding-tb-massive">
+    <footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padding-tb-massive">
         <div class="ui center aligned container">
 
             <!--底部导航栏-->
@@ -298,9 +205,13 @@
 
 
 
+    <!--/*/<th:block th:replace="_fragments :: script">/*/-->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js"></script>
-
+    <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+    <script src="../static/lib/prism/prism.js"></script>
+    <script src="../static/lib/waypoints/jquery.waypoints.min.js"></script>
+    <!--/*/</th:block>/*/-->
 
     <script>
         $('.menu.toggle').click(function () {
