@@ -4,6 +4,7 @@ import com.pingsunyi.techblog.NotFoundException;
 import com.pingsunyi.techblog.dao.BlogRepository;
 import com.pingsunyi.techblog.po.Blog;
 import com.pingsunyi.techblog.po.Type;
+import com.pingsunyi.techblog.util.MarkdownUtils;
 import com.pingsunyi.techblog.util.MyBeanUtils;
 import com.pingsunyi.techblog.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
@@ -34,6 +35,20 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public Blog getBlog(Long id) {
         return blogRepository.findById(id).get();
+    }
+
+    @Transactional
+    @Override
+    public Blog getAndConvert(Long id) {
+        Blog blog = blogRepository.findById(id).get();
+        if (blog == null) {
+            throw new NotFoundException("This blog does not exist");
+        }
+        Blog b = new Blog();
+        BeanUtils.copyProperties(blog, b);
+        String content = b.getContent();
+        b.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
+        return b;
     }
 
     @Override
