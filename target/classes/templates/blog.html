@@ -264,7 +264,10 @@
                                     <img src="../static/images/avatar.png" th:src="@{${comment.avatar}}">
                                 </a>
                                 <div class="content">
-                                    <a class="author" th:text="${comment.nickname}">Matt</a>
+                                    <a class="author">
+                                        <span th:text="${comment.nickname}">Matt</span>
+                                        <div class="ui tiny basic pink left pointing button m-padding-tiny" th:if="${comment.adminComment}">Blogger</div>
+                                    </a>
                                     <div class="metadata">
                                         <span class="date" th:text="${#dates.format(comment.createTime, 'yyyy-MM-dd HH:mm')}">Today at 5:42PM</span>
                                     </div>
@@ -281,11 +284,12 @@
                                 <div class="comments" th:if="${#arrays.length(comment.replyComments)}>0">
                                     <div class="comment" th:each="reply : ${comment.replyComments}">
                                         <a class="avatar">
-                                            <img src="../static/images/avatar.png" th:src="@{${comment.avatar}}">
+                                            <img src="../static/images/avatar.png" th:src="@{${reply.avatar}}">
                                         </a>
                                         <div class="content">
                                             <a class="author">
                                                 <span th:text="${reply.nickname}">Matt</span>&nbsp;
+                                                <div class="ui tiny basic pink left pointing button m-padding-tiny" th:if="${reply.adminComment}">Blogger</div>
                                                 <span th:text="|@ ${reply.parentComment.nickname}|" class="m-pink">@ Nancy</span>
                                             </a>
                                             <div class="metadata">
@@ -375,7 +379,7 @@
                         <div class="field m-mobile-wide m-margin-bottom-small">
                             <div class="ui left icon input">
                                 <i class="user icon"></i>
-                                <input type="text" name="nickname" placeholder="Name">
+                                <input type="text" name="nickname" placeholder="Name" th:value="${session.user}!=null ? ${session.user.nickname}">
                             </div>
                         </div>
                         <!--邮箱-->
@@ -383,7 +387,7 @@
                         <div class="field m-mobile-wide m-margin-bottom-small">
                             <div class="ui left icon input">
                                 <i class="mail icon"></i>
-                                <input type="text" name="email" placeholder="Email">
+                                <input type="text" name="email" placeholder="Email" th:value="${session.user}!=null ? ${session.user.email}">
                             </div>
                         </div>
                         <!--提交按钮-->
