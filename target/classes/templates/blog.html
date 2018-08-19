@@ -249,13 +249,14 @@
                 </div>
             </div>
 
-            <!--评论和留言-->
-            <!--comments & message-->
-            <div id="comment-container" class="ui bottom attached segment">
-                <!--评论展示-->
-                <!--display of comments-->
-                <div th:fragment="commentList">
-                    <div class="ui pink segment">
+            <div class="ui bottom attached segment">
+                <!--评论和留言-->
+                <!--comments & message-->
+                <div id="comment-container" class="ui bottom attached segment">
+                    <!--评论展示-->
+                    <!--display of comments-->
+                    <div th:fragment="commentList">
+
                         <div class="ui threaded comments" style="max-width: 100%;">
                             <h3 class="ui dividing header">Comments</h3>
                             <div class="comment" th:each="comment : ${comments}">
@@ -272,6 +273,31 @@
                                     </div>
                                     <div class="actions">
                                         <a class="reply" data-commentid="1" data-commentnickname="Matt" th:attr="data-commentid=${comment.id}, data-commentnickname=${comment.nickname}" onclick="reply(this)">Reply</a>
+                                    </div>
+                                </div>
+
+                                <!--子评论-->
+                                <!--children comments-->
+                                <div class="comments" th:if="${#arrays.length(comment.replyComments)}>0">
+                                    <div class="comment" th:each="reply : ${comment.replyComments}">
+                                        <a class="avatar">
+                                            <img src="../static/images/avatar.png" th:src="@{${comment.avatar}}">
+                                        </a>
+                                        <div class="content">
+                                            <a class="author">
+                                                <span th:text="${reply.nickname}">Matt</span>&nbsp;
+                                                <span th:text="|@ ${reply.parentComment.nickname}|" class="m-pink">@ Nancy</span>
+                                            </a>
+                                            <div class="metadata">
+                                                <span class="date" th:text="${#dates.format(reply.createTime, 'yyyy-MM-dd HH:mm')}">Today at 5:42PM</span>
+                                            </div>
+                                            <div class="text" th:text="${reply.content}">
+                                                How artistic!
+                                            </div>
+                                            <div class="actions">
+                                                <a class="reply" data-commentid="1" data-commentnickname="Matt" th:attr="data-commentid=${reply.id}, data-commentnickname=${reply.nickname}" onclick="reply(this)">Reply</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -331,6 +357,7 @@
                             </div>
                             <!--*/-->
                         </div>
+
                     </div>
                 </div>
                 <!--留言区域-->
@@ -367,6 +394,7 @@
                     </div>
                 </div>
             </div>
+
 
         </div>
     </div>
@@ -500,6 +528,10 @@
                     }]
                 }
             }
+        });
+
+        $(function () {
+            $("#comment-container").load(/*[[@{/comments/{id}(id=${blog.id})}]]*/"comments/6");
         });
 
         $('#commentpost-btn').click(function () {

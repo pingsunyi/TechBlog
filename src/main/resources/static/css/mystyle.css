@@ -210,6 +210,10 @@ body {
     color: #333 !important;
 }
 
+.m-pink {
+    color: deeppink !important;
+}
+
 .m-mobile-show {
     display: none !important;
 }
