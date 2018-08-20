@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="_fragments :: head(~{::title})">
     <meta charset="UTF-8">
     <!--fit for mobile end-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
 
     <!--导航-->
     <!--navigator-->
-    <nav class="ui inverted vertical segment m-padding-tb-tiny m-shadow-small">
+    <nav th:replace="_fragments :: menu(4)" class="ui inverted vertical segment m-padding-tb-tiny m-shadow-small">
         <div class="ui container">
             <div class="ui inverted secondary stackable menu">
                 <h1 class="ui pink header item">Sunny</h1>
@@ -56,62 +56,25 @@
                         <h2 class="ui pink header">Archives</h2>
                     </div>
                     <div class="right aligned column">
-                        <h2 class="ui pink header m-inline-block">1 </h2> posts
+                        <h2 class="ui pink header m-inline-block" th:text="${blogCount}">1 </h2> posts
                     </div>
                 </div>
             </div>
 
             <!--归档列表-->
             <!--list of archives-->
-            <h2 class="ui center aligned header">2017</h2>
-            <div class="ui fluid vertical menu">
-                <a href="#" target="_blank" class="item">
+            <th:block th:each="item : ${archiveMap}">
+                <h2 class="ui center aligned header" th:text="${item.key}">2017</h2>
+                <div class="ui fluid vertical menu">
+                    <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item" th:each="blog : ${item.value}">
                     <span>
-                        <i class="mini pink circle icon"></i>My First Blog
-                        <div class="ui tiny pink basic button m-padding-tiny">09-03</div>
+                        <i class="mini pink circle icon"></i><span th:text="${blog.title}">My First Blog</span>
+                        <div class="ui tiny pink basic button m-padding-tiny" th:text="${#dates.format(blog.updateTime, 'MMMdd')}">09-03</div>
                     </span>
-                    <div class="ui orange label m-padding-tiny">Original</div>
-                </a>
-                <a href="#" target="_blank" class="item">
-                    <span>
-                        <i class="mini pink circle icon"></i>My First Blog
-                        <div class="ui tiny pink basic button m-padding-tiny">09-03</div>
-                    </span>
-                    <div class="ui orange label m-padding-tiny">Original</div>
-                </a>
-                <a href="#" target="_blank" class="item">
-                    <span>
-                        <i class="mini pink circle icon"></i>My First Blog
-                        <div class="ui tiny pink basic button m-padding-tiny">09-03</div>
-                    </span>
-                    <div class="ui orange label m-padding-tiny">Original</div>
-                </a>
-            </div>
-
-            <h2 class="ui center aligned header">2016</h2>
-            <div class="ui fluid vertical menu">
-                <a href="#" target="_blank" class="item">
-                    <span>
-                        <i class="mini pink circle icon"></i>My First Blog
-                        <div class="ui tiny pink basic button m-padding-tiny">09-03</div>
-                    </span>
-                    <div class="ui orange label m-padding-tiny">Original</div>
-                </a>
-                <a href="#" target="_blank" class="item">
-                    <span>
-                        <i class="mini pink circle icon"></i>My First Blog
-                        <div class="ui tiny pink basic button m-padding-tiny">09-03</div>
-                    </span>
-                    <div class="ui orange label m-padding-tiny">Original</div>
-                </a>
-                <a href="#" target="_blank" class="item">
-                    <span>
-                        <i class="mini pink circle icon"></i>My First Blog
-                        <div class="ui tiny pink basic button m-padding-tiny">09-03</div>
-                    </span>
-                    <div class="ui orange label m-padding-tiny">Original</div>
-                </a>
-            </div>
+                        <div class="ui orange label m-padding-tiny" th:text="${blog.flag}">Original</div>
+                    </a>
+                </div>
+            </th:block>
         </div>
     </div>
     <br>
@@ -120,7 +83,7 @@
 
     <!--底部-->
     <!--footer-->
-    <footer class="ui inverted vertical segment m-padding-tb-massive">
+    <footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padding-tb-massive">
         <div class="ui center aligned container">
 
             <!--底部导航栏-->
@@ -163,8 +126,13 @@
 
 
 
+    <!--/*/<th:block th:replace="_fragments :: script">/*/-->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+    <script src="../static/lib/prism/prism.js"></script>
+    <script src="../static/lib/waypoints/jquery.waypoints.min.js"></script>
+    <!--/*/</th:block>/*/-->
 
 
     <script>
